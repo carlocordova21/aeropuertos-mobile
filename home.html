@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" href="build/css/app.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<header class="navbar flex justify-between items-center relative">
+			<div class="menu-btn block">
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+			</div>
+			<img class="w-logo" src="build/img/logo-avion.webp" alt="logo-avion" />
+			<svg
+				class="map-svg"
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				style="fill: rgba(38, 38, 38, 1); transform: ; msfilter: "
+			>
+				<path
+					d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+				></path>
+			</svg>
+			<!-- Menu Open -->
+			<div class="menu-modal absolute w-full">
+				<ul>
+					<li>Europa</li>
+					<li>Norteamerica</li>
+					<li>Centroamerica</li>
+					<li>Sudamerica</li>
+				</ul>
+			</div>
+		</header>
+		<!-- Menu mobile -->
+		<section class="sub-header container">
+			<div class="title-wrap separator">
+				<h1 class="title m-0">Aeropuertos más importantes del mundo</h1>
+			</div>
+			<section class="search">
+				<h5 class="text-search m-0">Buscar:</h5>
+				<form class="flex flex-col items-center" action="">
+					<input
+						class="input-search w-full b-0"
+						type="text"
+						name="search"
+						id="search"
+						placeholder="¿Qué estás buscando?"
+						autofocus
+					/>
+					<button class="btn-search" type="submit">Buscar</button>
+				</form>
+			</section>
+		</section>
+		<div class="continents-wrap w-full">
+			<h5 class="container">Continentes:</h5>
+			<ul class="continents accordion-list">
+				<li class="continent-wrap flex flex-col">
+					<label class="continent"> Europa </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="continent-wrap flex flex-col">
+					<label class="continent"> Norteamérica </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="continent-wrap flex flex-col">
+					<label class="continent"> Centroamérica </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="continent-wrap flex flex-col">
+					<label class="continent"> Sudamérica </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="continent-wrap flex flex-col">
+					<label class="continent relative"> Asia </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="continent-wrap flex flex-col">
+					<label class="continent"> Africa </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="continent-wrap flex flex-col">
+					<label class="continent"> Oceanía </label>
+					<div class="airports-continent answer">
+						<a title="Europa" href="https://www.aeropuertos.net/europa/"
+							>Ir a Europa</a
+						>
+						<ul>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto Adolfo Suárez Madrid-Barajas"
+										href="https://www.aeropuertos.net/aeropuerto-de-madrid/"
+										>Aeropuerto Adolfo Suárez Madrid-Barajas (MAD)</a
+									></strong
+								><br />
+								(Madrid,
+								<a
+									title="Aeropuertos de España"
+									href="https://www.aeropuertos.net/europa/espana/"
+									>España</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Londres-Heathrow"
+										href="https://www.aeropuertos.net/aeropuerto-de-londres-heathrow/"
+										>Aeropuerto de Londres-Heathrow (LHR)</a
+									></strong
+								><br />
+								(Londres,
+								<a
+									title="Aeropuertos de Inglaterra"
+									href="https://www.aeropuertos.net/europa/inglaterra/"
+									>Inglaterra</a
+								>, Reino Unido)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de París-Charles de Gaulle"
+										href="https://www.aeropuertos.net/aeropuerto-de-paris-charles-de-gaulle/"
+										>Aeropuerto de París-Charles de Gaulle (CDG)</a
+									></strong
+								><br />
+								(París,
+								<a
+									title="Aeropuertos de Francia"
+									href="https://www.aeropuertos.net/europa/francia/"
+									>Francia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Frankfurt"
+										href="https://www.aeropuertos.net/aeropuerto-de-frankfurt/"
+										>Aeropuerto de Frankfurt (FRA)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Alemania"
+									href="https://www.aeropuertos.net/europa/alemania/"
+									>Alemania</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Moscú-Sheremetyevo"
+										href="https://www.aeropuertos.net/aeropuerto-internacional-de-moscu-sheremetyevo/"
+										>Internacional de Moscú-Sheremetyevo (SVO)</a
+									></strong
+								><br />
+								(Frankfurt,
+								<a
+									title="Aeropuertos de Rusia"
+									href="https://www.aeropuertos.net/asia/rusia/"
+									>Rusia</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Ámsterdam-Schiphol"
+										href="https://www.aeropuertos.net/aeropuerto-de-amsterdam-schiphol/"
+										>Aeropuerto de Ámsterdam-Schiphol (AMS)</a
+									></strong
+								><br />
+								(Ámsterdam,
+								<a
+									title="Aeropuertos de Holanda"
+									href="https://www.aeropuertos.net/europa/holanda/"
+									>Holanda</a
+								>)
+							</li>
+							<li>
+								<strong
+									><a
+										title="Aeropuerto de Roma-Fiumicino"
+										href="https://www.aeropuertos.net/aeropuerto-de-roma-fiumicino/"
+										>Aeropuerto de Roma-Fiumicino (FCO)</a
+									></strong
+								><br />
+								(Roma,
+								<a
+									title="Aeropuertos de Italia"
+									href="https://www.aeropuertos.net/europa/italia/"
+									>Italia</a
+								>)
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<footer class="social-footer flex justify-between container">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+			>
+				<path
+					d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"
+				/>
+			</svg>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+			>
+				<path
+					d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+				/>
+			</svg>
+		</footer>
+		<script src="src/jquery/accordion-jquery.js"></script>
+		<script src="build/js/bundle.min.js"></script>
+		<script src="build/jquery/bundle_jquery.min.js"></script>
+		<script src="src/js/btn_menu.js"></script>
+	</body>
+</html>

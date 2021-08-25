@@ -1,0 +1,99 @@
+.navbar {
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5ebf0;
+  position: sticky;
+  top: 0;
+  //Menu-btn
+  .menu-btn {
+    margin-left: 1rem;
+  }
+  
+  .menu-btn .btn-line {
+    width: 22px;
+    height: 2.8px;
+    margin: 0 0 2px 0;
+    background: #262626;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  
+  .btn-line:nth-child(3) {
+    margin: 0;
+  }
+  
+  /* Adding transform to the X */
+  .menu-btn.close {
+    transform: rotate(180deg);
+  }
+  
+  /* Styling the three lines
+  to make it an X */
+  .menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 5px);
+  }
+  
+  .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -5px);
+  }
+  
+  
+  /* Adding a transition delay to the
+  3 items in the navigation menu */
+  .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .nav-item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  //LOGO
+  .w-logo {
+    width: 2rem;
+  }
+
+  //MAPA SVG element
+  .map-svg {
+    margin-right: 1rem;
+  }
+}
+
+//MENU-MODAL
+.menu-modal {
+  position: absolute;
+  top: 2.5em;
+  // background-color:#6699fff7;
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  font-size: 1.2em;
+  box-shadow: 0px 3px 15px rgb(0 0 0 / 20%);
+  transition: left 200ms ease-in-out;
+  left: -1000px;
+  width: 90%;
+  height: 30rem;
+  z-index: 1;
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+.close ~ .menu-modal{
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
